@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"SubscriptionID": {
+			"value": "cd80669d-c886-455a-b108-8299fac678e3"
+		},
+		"TenantID": {
+			"value": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
+		},
+		"ClientID": {
+			"value": "87fb3362-daf3-4783-ad70-4b8208e8aec7"
+		},
+		"ClientSecret": {
+			"value": "BVU3O4dQkxcqgFlwLfH01d:-dXX/LH@H"
+		},
+		"DataFactoryName": {
+			"value": "mahakadf"
+		},
+		"StorageAccountName": {
+			"value": "mahaktest"
+		},
+		"StorageAccessKey": {
+			"value": "GkvhCVwc0/9efLe1hsmhKHjABhkU0w0jBk/cl4LDVMGRNCsqnlsppA1bAwBrx3ouK7ooKN0Qmhgf31QAoAJcAw=="
+		},
+		"StorageConnectionString": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=mahaktest;AccountKey=GkvhCVwc0/9efLe1hsmhKHjABhkU0w0jBk/cl4LDVMGRNCsqnlsppA1bAwBrx3ouK7ooKN0Qmhgf31QAoAJcAw==;EndpointSuffix=core.windows.net"
+		},
+		"SQLServerName": {
+			"value": "ctazuresmartenterprise-sqlserver"
+		},
+		"SQLUsername": {
+			"value": "celebal"
+		},
+		"SQLPassword": {
+			"value": "password@123"
+		},
+		"SQLConnectionString": {
+			"value": "Server=tcp:ctazuresmartenterprise-sqlserver.database.windows.net,1433;Initial Catalog=ctazuresmartenterprise-db;Persist Security Info=False;User ID=celebal;Password=password@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+		},
+		"SQLDatabaseName": {
+			"value": "ctazuresmartenterprise-db"
+		},
+		"DatabricksName": {
+			"value": "ctazuresmartenterprise-dbrs"
+		},
+		"DataBricksWorkspaceURL": {
+			"value": "https://centralus.azuredatabricks.net"
+		},
+		"DataBricksToken": {
+			"value": "dapi88a1aa43f6ff706ed86d574f440e3558"
+		},
+		"DataBricksScope": {
+			"value": "scope"
+		},
+		"PowerBIEmbeddedName": {
+			"value": "ctazuresmartenterprisepowerbi"
+		},
+		"PowerBIEmbeddedAdmin": {
+			"value": "murtazabw@celebaltech.com"
+		},
+		"AppServiceName": {
+			"value": "ctazuresmartenterprise"
+		},
+		"AppServiceURL": {
+			"value": "https://ctazuresmartenterprise.azurewebsites.net"
+		},
+		"AzureFunctionURL": {
+			"value": "https://ctazuresmartenterprise-function-app.azurewebsites.net/api/createschemaindwh?code=4lSGi8bKQyDq3dAnAZuRo5SuGCAupAV1WXI2RBnD5r/wlWRkUBREqw=="
+		},
+		"KeyVaultName": {
+			"value": "mahak12345"
+		},
+		"KeyVaultLocation": {
+			"value": "Central US"
+		},
+		"ResourceGroupName": {
+			"value": "smart_RG"
+		},
+		"ResourceGroupLocation": {
+			"value": "Central US"
+		}
+	}
+}

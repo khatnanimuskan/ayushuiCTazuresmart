@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"DataFactoryName": {
+			"value": "blobkey442"
+		},
+		"DataFactoryLocation": {
+			"value": "Central US"
+		},
+		"StorageConnectionString": {
+			"value": "DefaultEndpointsProtocol=https;AccountName=ctazuresmartenterprisesa;AccountKey=va6CS071hP2nK5QgSiet6Su+707CXb/XVspGNd0DuN3tgVtS8CoOFHnaLjYEpKjOrmx+Zq6M9dHQ6nunofpIdw==;EndpointSuffix=core.windows.net"
+		},
+		"SQLConnectionString": {
+			"value": "Server=tcp:ctazuresmartenterprise-sqlserver.database.windows.net,1433;Initial Catalog=ctazuresmartenterprise-db;Persist Security Info=False;User ID=celebal;Password=password@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+		},
+		"AzureFunctionURL": {
+			"value": "https://ctazuresmartenterprise-function-app.azurewebsites.net/api/createschemaindwh?code=4lSGi8bKQyDq3dAnAZuRo5SuGCAupAV1WXI2RBnD5r/wlWRkUBREqw=="
+		},
+		"Sources": {
+			"value": "SalesForce"
+		},
+		"SalesForceUsername": {
+			"value": "abhimishra89@gmail.com"
+		},
+		"SalesForcePassword": {
+			"value": "@bhishek89550"
+		},
+		"SalesForceToken": {
+			"value": "kqJldG8JG6edH9YUUSUrv7ZIY"
+		},
+		"SalesForceTables": {
+			"value": [{
+				"objects_label": "Accounts",
+				"objects_name": "Account"
+			}, {
+				"objects_label": "Contacts",
+				"objects_name": "Contact"
+			}]
+		}
+	}
+}
