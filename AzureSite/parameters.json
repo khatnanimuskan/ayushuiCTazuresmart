@@ -4,16 +4,16 @@
     "contentVersion" : "1.0.0.0"
   },
   "ADFParameters" : {
-    "values" : ["DataFactoryName", "DataFactoryLocation","DataFactorySources", "StorageConnectionString", "SQLConnectionString", "AzureFunctionURL",
-                 "Sources", "SalesForceUsername", "SalesForcePassword", "SalesForceToken", "SalesForceTables", "SalesForceSchema", "SaleForceTables", "BlobTableName",
-                 "bqproject", "bqclientid", "bqclientsecret", "bqtoken", "bqtableschema", "bqtables", "SAPServerName", "SAPUsername",
+    "values" : ["DataFactoryName", "DataFactoryLocation","StorageConnectionString","Sources", "SQLConnectionString", "AzureFunctionURL",
+                 "AzureFunctionURL","Sources", "SalesForceUsername", "SalesForcePassword", "SalesForceToken", "SalesForceTables", "SalesForceSchema", "SaleForceTables", "BlobTableName",
+                 "BQProject", "bqclientid", "bqclientsecret", "bqtoken", "bqtableschema", "bqtables", "SAPServerName", "SAPUsername",
                  "SAPPassword", "SAPSchema", "SAPTables", "OracleServerName", "OraclePort", "OracleSID", "OracleUser", "OraclePassword",
                  "OracleSchema", "OracleTables", "SalesForceUsername", "SalesForcePassword", "SalesForceToken", "SalesForceSchema", "SalesForceTables", "BlobTableName"]
   },
   "KeyVaultParameters": {
-    "values" : ["SubscriptionID", "TenantID", "ClientID", "ClientSecret", "DataFactoryName", "StorageAccountName", "AccessKey", "StorageConnString", "SQLServerName", "SQLUsername", "SQLPassword", "SQLConnectionString", "SQLDatabaseName"
-    , "DatabricksName", "DataBricksWorkspaceURL", "DataBricksToken", "DataBricksScope", "PowerBIEmbeddedName", "PowerBIEmbeddedAdmin", "AppServiceName"
-    , "AppServiceURL", "AzureFunctionURL", "KeyVaultName", "KeyVaultLocation", "ResourceGroupName", "ResourceGroupLocation"
+    "values" : ["SubscriptionID", "TenantID", "ClientID", "ClientSecret", "StorageAccountName", "StorageAccessKey","StorageConnectionString", "SQLServerName", "SQLUsername", "SQLPassword","SQLConnectionString", "SQLDatabaseName",
+    "DataFactoryName", "DatabricksName", "DataBricksWorkspaceURL", "DataBricksToken", "DataBricksScope", "PowerBIEmbeddedName", "PowerBIEmbeddedAdmin", "AppServiceName"
+    , "AppServiceURL",  "KeyVaultName", "KeyVaultLocation", "ResourceGroupName","AzureFunctionURL", "ResourceGroupLocation"
     ]
   },
   "DependentSections": ["SAP", "Salesforce", "Oracle", "BQ"],

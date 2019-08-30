@@ -13,6 +13,7 @@ from azure.storage.blob import BlockBlobService
 from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.storage import StorageManagementClient
+from collections import OrderedDict
 from azure.mgmt.storage.models import StorageAccountCreateParameters
 
 # read Data for form config File
@@ -43,34 +44,33 @@ def azure_account(data):
     :param data: request data
     :return: resource_id and client_id
     """
-    sections_data = data['sections']
+    data = data['sections']
     client_id = ''
     secret = ''
     tenant = ''
     subscription_id = ''
     try:
-        for section in range(len(sections_data)):
-            try:
-                if sections_data[section]['title']=='Subscription Details':
-                    subscription_id = sections_data[section]['sectionAttributes'][0]['value']
-                    tenant = sections_data[section]['sectionAttributes'][1]['value']
-                    client_id = sections_data[section]['sectionAttributes'][2]['value']
-                    secret = sections_data[section]['sectionAttributes'][3]['value']
-                elif sections_data[section]['title'] =='Storage Account Details':
-                    storage_account_name = sections_data[section]['sectionAttributes'][0]['value']
-            except Exception as e:
-                print('error in for loop of azure_function', e)
+        for i in range(len(data)):
+            # print(data[i]['title'])
+            if data[i]['title']=='Subscription Details':
+                subscription_id = data[i]['sectionAttributes'][0]['value']
+                tenant = data[i]['sectionAttributes'][1]['value']
+                client_id = data[i]['sectionAttributes'][2]['value']
+                secret = data[i]['sectionAttributes'][3]['value']
+            elif data[i]['title'] =='Storage Account Details':
+                storage_account_name = data[i]['sectionAttributes'][0]['value']
+
         credentials = ServicePrincipalCredentials(
             client_id=client_id,
             secret=secret,
             tenant=tenant
         )
 
-        print(storage_account_name, "storage_account_name.....")
         resource_client = ResourceManagementClient(credentials, subscription_id)
         storage_client = StorageManagementClient(credentials, subscription_id)
     except Exception as e:
-        print('error in azure_account function:', e)
+        print('error in azure_account function', e)
+
     return resource_client, storage_client, storage_account_name
 
 
@@ -81,11 +81,9 @@ class azure_functions(APIView):
     def post(self, request):
         try:
             resource_client, storage_client, storage_account_name = azure_account(request.data)
-            print("storage_account_name: ", storage_account_name)
             availability = storage_client.storage_accounts.check_name_availability(storage_account_name)
             reason = availability.reason
-            print("reason:", reason)
-            if reason is not None and reason == "AlreadyExists":
+            if reason is not None and reason.lower() == 'alreadyexists':
                 return JsonResponse({"status": "success"})
             else:
                 return JsonResponse({"status": "failed"})
@@ -93,7 +91,6 @@ class azure_functions(APIView):
         except Exception as e:
             print('In azure_function exception', e)
             return JsonResponse({'status': 'failed'})
-
 
 def index(request):
     """
@@ -104,9 +101,10 @@ def index(request):
     try:
         data = read_mapping()
     except Exception as e:
-        return render(request, 'supplychain/index.html', context={'message': 'Failed'})
+        return JsonResponse({'Output': 'Error in reading json file ' + str(e)})
     # return JsonResponse({'message': 'Successful', 'formConfig': data})
     return render(request, 'supplychain/index.html', context={'message': 'Successful'})
+
 
 class SupplyChain(APIView):
 
@@ -121,6 +119,7 @@ class SupplyChain(APIView):
         except Exception as e:
             return JsonResponse({'Output': 'Error in reading json file ' + str(e)})
         return JsonResponse({'message': 'Successful', 'formConfig': data})
+        # return render(request, 'supplychain/index.html', context={'message': 'Successful'})
 
     def post(self, request):
         """
@@ -134,13 +133,15 @@ class SupplyChain(APIView):
                 param_file = json.load(file)
                 adf_parameters = param_file['ADFParameters']['values']
                 vault_parameters = param_file['KeyVaultParameters']['values']
-                adf_dict = { '$schema': param_file['general']['schema'],
+                adf_dict = {'$schema': param_file['general']['schema'],
                             'contentVersion': param_file['general']['contentVersion'], 'parameters': {}}
                 vault_dict = { '$schema': param_file['general']['schema'],
                               'contentVersion': param_file['general']['contentVersion'], 'parameters': {}}
             # Container Name to be used in Azure Deployment
             container_name = param_file['containername']
             # Convert Parameter list to lowercase
+            adf_parameters2 = adf_parameters.copy()
+            vault_parameters2 = vault_parameters.copy()
             adf_parameters = list(map(lambda func: func.lower(), adf_parameters))
             vault_parameters = list(map(lambda func: func.lower(), vault_parameters))
         except Exception as e:
@@ -157,9 +158,12 @@ class SupplyChain(APIView):
                     try:
                         name = sectionAttributes[sectionAttribute]['internalName']
                         value = sectionAttributes[sectionAttribute]['value']
+                        print(name)
                         if name.lower() in adf_parameters:
                             adf_dict['parameters'][name] = {'value': value}
-                        if name.lower() in vault_parameters:
+                            print(name)
+                        elif name.lower() in vault_parameters:
+                            print(name)
                             vault_dict['parameters'][name] = {'value': value}
                     except Exception as e:
                         print('error in inner loop', sectionAttribute, str(e))
@@ -168,16 +172,16 @@ class SupplyChain(APIView):
                 return JsonResponse({'Output': 'error'})
         # For optional Table
 
-        select_variables = ["SAP", "SalesForce", "Oracle", "BQ"]
-
+        select_variables = ["SAP", "Salesforce", "Oracle", "BQ"]
         try:
-            selected_value = adf_dict['parameters']['Sources']['value']
+            print("1............................")
+            selected_value = adf_dict['parameters']['datafactorysources']['value']
+            print("selected_value: ", selected_value)
             # Extract submitted data for selected field
 
             if selected_value in select_variables:
                 temp_param = (selected_value) + 'Tables'
-                subsections = section_data[3]['subsections']['sections'][selected_value]['subsectionAttributes']
-
+                subsections = section_data[2]['subsections']['sections'][selected_value]['subsectionAttributes']
                 schemas = []
                 tables = []
                 for i in range(len(subsections)):
@@ -186,7 +190,6 @@ class SupplyChain(APIView):
                     elif subsections[i]['internalName'] == selected_value+'Tables':
                         tables = subsections[i]['value'].split(',')
                     else:
-
                         adf_dict['parameters'][subsections[i]['internalName']] = {'value': subsections[i]['value']}
                 adf_dict['parameters'][temp_param] = {"value": []}
                 for i in range(len(schemas)):
@@ -196,7 +199,7 @@ class SupplyChain(APIView):
             else:
                 # when Blob Option is choosen
                 adf_dict['parameters']["BlobTables"] = {"value": []}
-                tables = section_data[3]['subsections']['sections'][selected_value]['subsectionAttributes'][0]['value'].split(',')
+                tables = section_data[2]['subsections']['sections'][selected_value]['subsectionAttributes'][0]['value'].split(',')
                 for table in range(len(tables)):
                     adf_dict['parameters']["BlobTables"]['value'].append({'table_name': tables[table]})
 
@@ -206,13 +209,13 @@ class SupplyChain(APIView):
         except Exception as e:
             print('Exception in creating table data: ', e)
             return JsonResponse({"message": "error"})
-
+        print(adf_dict, vault_dict)
+        return JsonResponse({'wok':'auicjno'})
         # Get all required parameters from submitted data for Azure Deployment
         try:
-            print('--------', vault_dict)
-            connectionstring = vault_dict['parameters']['StorageConnectionString']['value']
-            account_name = vault_dict['parameters']['StorageAccountName']['value']
-            access_key = vault_dict['parameters']['StorageAccessKey']['value']
+            connectionstring = vault_dict['parameters']['storageconnstring']['value']
+            account_name = vault_dict['parameters']['storageaccountname']['value']
+            access_key = vault_dict['parameters']['accesskey']['value']
 
             for key in range(len(section_data)):
                 try:
@@ -233,17 +236,12 @@ class SupplyChain(APIView):
                     subscription_id = ''
                     resource_group = ''
 
-        except KeyError as key:
-            print('Key Not found', key)
+        except KeyError:
+            print('Key Not found')
+
         # Azure Deployment code
         try:
-            with open('upload_files/ADFParameters.json', 'w') as adf:
-                json.dump(adf_dict, adf)
-            with open('upload_files/KeyVaultParameters.json', 'w') as kv:
-                json.dump(vault_dict, kv)
-
-            print("adf and kv files created")
-            print('account nameacs ', storage_account_name, access_key)
+            print('account nameacs ', account_name, access_key)
             # resource_client, storage_client = azure_account(request.data)
             # Create a storage blob container to store the files
             # Create the BlockBlockService that is used to call the Blob service for the storage account.
@@ -290,7 +288,6 @@ class SupplyChain(APIView):
                 print("Exception in deploy the data factory: ", e)
             # Remove conatiner from storage account after deployment
             try:
-                time.sleep(720)
                 delete_container = blob_client.delete_container(container_name)
                 print("delete container: ", delete_container)
             except Exception as e:

@@ -22,62 +22,6 @@
 			]
 		},
 		{
-			"title": "Subscription Details",
-			"helpText": "Add up your subscription details.",
-			"sectionAttributes": [{
-					"inputType": "text",
-					"internalName": "SubscriptionID",
-					"label": "Subscription ID",
-					"value": "",
-					"placeholder": "Subscription ID",
-					"attrHelpText": "Enter the Subscription ID."
-				},
-				{
-					"inputType": "text",
-					"internalName": "TenantID",
-					"label": "Tenant ID",
-					"value": "",
-					"placeholder": "Tenant ID",
-					"attrHelpText": "Enter the Tenant ID."
-				},
-				{
-					"inputType": "text",
-					"internalName": "ClientID",
-					"label": "Client ID",
-					"value": "",
-					"placeholder": "Client ID",
-					"attrHelpText": "Enter the Client ID."
-				},
-				{
-					"inputType": "text",
-					"internalName": "ClientSecret",
-					"label": "Client Secret",
-					"value": "",
-					"placeholder": "Client Secret",
-					"attrHelpText": "Enter the Client Secret."
-				},
-				{
-					"inputType": "text",
-					"internalName": "ResourceGroupName",
-					"label": "Resource Group",
-					"value": "",
-					"placeholder": "Resource Group",
-					"attrHelpText": "Enter the Resource Group."
-				},
-				{
-					"inputType": "select",
-					"internalName": "ResourceGroupLocation",
-					"options": ["Australia East", "Brazil South", "Canada Central", "Central India", "Central US",
-        						"East US", "East US 2", "France Central", "Japan East", "North Europe", "South Central US", "Southeast Asia", "UK South",
-        						"West Central US", "West Europe", "West US", "West US 2"],
-					"label": "Resource Group Location",
-					"value": "East US",
-					"placeholder": "Resource Group Location",
-					"attrHelpText": "Select the Resource Group Location."
-				}
-			]
-		},
-		{
 			"title": "App Service Details",
 			"helpText": "Add details regarding the App services here.",
 			"sectionAttributes": [{
@@ -112,15 +56,15 @@
 				{
 					"inputType": "select",
 					"internalName": "DataFactoryLocation",
-					"options": ["East US", "West US", "Central US"],
+					"options": ["East-US", "West-US", "Central-US"],
 					"label": "Data Factory Location",
-					"value": "Central US",
+					"value": "Central-US",
 					"placeholder": "Data Factory Location",
 					"attrHelpText": "Select the Data Factory Location."
 				},
 				{
 					"inputType": "select",
-					"internalName": "Sources",
+					"internalName": "DataFactorySources",
 					"options": ["BQ", "Oracle", "SAP", "SalesForce", "Blob"],
 					"label": "Data Factory Sources",
 					"value": "BQ",
@@ -129,7 +73,7 @@
 				}
 			],
 			"subsections": {
-				"parentName": "Sources",
+				"parentName": "DataFactorySources",
 				"sections": {
 					"BQ": {
 						"title": "BQ Details",
@@ -359,15 +303,15 @@
 			"helpText": "Add details regarding Storage Account.",
 			"sectionAttributes": [{
 					"inputType": "text",
-					"internalName": "StorageAccountName",
+					"internalName": "storageaccountname",
 					"label": "Storage Account Name",
 					"value": "",
-					"placeholder": "Storage Account Name",
-					"attrHelpText": "Enter Storage Account Name."
+					"placeholder": "Data Factory Name",
+					"attrHelpText": "Enter Data Factory Name."
 				},
 				{
 					"inputType": "text",
-					"internalName": "StorageAccessKey",
+					"internalName": "accesskey",
 					"label": "Access Key",
 					"value": "",
 					"placeholder": "Access Key",
@@ -375,7 +319,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "StorageConnectionString",
+					"internalName": "storageconnstring",
 					"label": "Storage Account Connection String",
 					"value": "",
 					"placeholder": "Connection String",
@@ -388,7 +332,7 @@
 			"helpText": "Add the details of your SQL Server.",
 			"sectionAttributes": [{
 					"inputType": "text",
-					"internalName": "SQLServerName",
+					"internalName": "sqlservername",
 					"label": "SQL Server Name",
 					"value": "",
 					"placeholder": "SQL Server Name",
@@ -396,7 +340,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "SQLUserName",
+					"internalName": "sqlusername",
 					"label": "Username",
 					"value": "",
 					"placeholder": "Username",
@@ -404,7 +348,7 @@
 				},
 				{
 					"inputType": "password",
-					"internalName": "SQLPassword",
+					"internalName": "sqlpassword",
 					"label": "Password",
 					"value": "",
 					"placeholder": "Password",
@@ -412,7 +356,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "SQLDatabaseName",
+					"internalName": "databasename",
 					"label": "Database Name",
 					"value": "",
 					"placeholder": "Database Name",
@@ -420,7 +364,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "SQLConnectionString",
+					"internalName": "sqlserverconnstring",
 					"label": "SQL Server Connection String",
 					"value": "",
 					"placeholder": "SQL Server Connection String",
@@ -433,7 +377,7 @@
 			"helpText": "Add the details of Databricks.",
 			"sectionAttributes": [{
 					"inputType": "text",
-					"internalName": "DataBricksName",
+					"internalName": "databricksname",
 					"label": "Databricks Name",
 					"value": "",
 					"placeholder": "Databricks Name",
@@ -441,7 +385,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "DataBricksToken",
+					"internalName": "accesstoken",
 					"label": "Access Token",
 					"value": "",
 					"placeholder": "Access Token",
@@ -449,15 +393,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "DataBricksScope",
-					"label": "DataBricks Scope",
-					"value": "",
-					"placeholder": "DataBricks Scope",
-					"attrHelpText": "Enter the DataBricks Scope."
-				},
-				{
-					"inputType": "text",
-					"internalName": "DataBricksWorkspaceURL",
+					"internalName": "databricksworkspaceurl",
 					"label": "Databricks Workspace URL",
 					"value": "",
 					"placeholder": "Databricks Workspace URL",
@@ -470,7 +406,7 @@
 			"helpText": "Add the following Power BI details.",
 			"sectionAttributes": [{
 					"inputType": "text",
-					"internalName": "PowerBIEmbeddedName",
+					"internalName": "powerbiembed",
 					"label": "Power BI Embedded",
 					"value": "",
 					"placeholder": "Power BI Embedded",
@@ -478,7 +414,7 @@
 				},
 				{
 					"inputType": "text",
-					"internalName": "PowerBIEmbeddedAdmin",
+					"internalName": "powerbiadmin",
 					"label": "Power BI Admin",
 					"value": "",
 					"placeholder": "Power BI Admin",
@@ -491,7 +427,7 @@
 			"helpText": "Add the details for your Key Vault.",
 			"sectionAttributes": [{
 					"inputType": "text",
-					"internalName": "KeyVaultName",
+					"internalName": "keyvaultname",
 					"label": "Key Vault Name",
 					"value": "",
 					"placeholder": "Key Vault Name",
@@ -499,24 +435,75 @@
 				},
 				{
 					"inputType": "select",
-					"internalName": "KeyVaultLocation",
-					"options": ["Australia Central","Australia East", "Australia Southeast", "Brazil South", "Canada Central", "Canada East", "Central India", "Central US", "East Asia", "East US", "East US 2", "France Central", "Germany West Central", "Japan East", "Japan West",
-								"Korea Central", "Korea South", "North Central US", "North Europe", "South Africa North", "South Central US", "South India",
-								"Southeast Asia", "UAE North", "UK South", "UK West", "West Central US", "West Europe", "West India", "West US", "West US 2"],
+					"internalName": "keyvaultlocation",
+					"options": ["East-US", "West-US", "Central-US"],
 					"label": "Key Vault Location",
-					"value": "East US",
+					"value": "East-US",
 					"placeholder": "Key Vault Location",
 					"attrHelpText": "Select the Key Vault Location."
 				}
 			]
 		},
-
+		{
+			"title": "Subscription Details",
+			"helpText": "Add up your subscription details.",
+			"sectionAttributes": [{
+					"inputType": "text",
+					"internalName": "subscriptionid",
+					"label": "Subscription ID",
+					"value": "",
+					"placeholder": "Subscription ID",
+					"attrHelpText": "Enter the Subscription ID."
+				},
+				{
+					"inputType": "text",
+					"internalName": "tenantid",
+					"label": "Tenant ID",
+					"value": "",
+					"placeholder": "Tenant ID",
+					"attrHelpText": "Enter the Tenant ID."
+				},
+				{
+					"inputType": "text",
+					"internalName": "clientid",
+					"label": "Client ID",
+					"value": "",
+					"placeholder": "Client ID",
+					"attrHelpText": "Enter the Client ID."
+				},
+				{
+					"inputType": "text",
+					"internalName": "secretkey",
+					"label": "Client Secret",
+					"value": "",
+					"placeholder": "Client Secret",
+					"attrHelpText": "Enter the Client Secret."
+				},
+				{
+					"inputType": "text",
+					"internalName": "resourcegroup",
+					"label": "Resource Group",
+					"value": "",
+					"placeholder": "Resource Group",
+					"attrHelpText": "Enter the Resource Group."
+				},
+				{
+					"inputType": "select",
+					"internalName": "rglocation",
+					"options": ["East-US", "West-US", "Central-US"],
+					"label": "Resource Group Location",
+					"value": "East-US",
+					"placeholder": "Resource Group Location",
+					"attrHelpText": "Select the Resource Group Location."
+				}
+			]
+		},
 		{
 			"title": "Azure Function Details",
 			"helpText": "Add details for azure function.",
 			"sectionAttributes": [{
 					"inputType": "text",
-					"internalName": "AzureFunctionURL",
+					"internalName": "functionurl",
 					"label": "Azure Function URL",
 					"value": "",
 					"placeholder": "Azure Function URL",

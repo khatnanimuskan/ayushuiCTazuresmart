@@ -1,0 +1,329 @@
+{
+	"sections": [{
+			"title": "User Details",
+			"helpText": "Add user details.",
+			"sectionAttributes": [{
+					"inputType": "text",
+					"internalName": "customerName",
+					"label": "Customer Name",
+					"value": "",
+					"placeholder": "Customer Name",
+					"attrHelpText": "Enter the customer name."
+				},
+				{
+					"inputType": "generateid",
+					"internalName": "generateuniqueid",
+					"buttonLabel": "Generate ID",
+					"label": "Generate Unique ID",
+					"value": "",
+					"placeholder": "Generate Unique ID",
+					"attrHelpText": "Your ID will be generated automatically."
+				}
+			]
+		},
+		{
+			"title": "App Service Details",
+			"helpText": "Add details regarding the App services here.",
+			"sectionAttributes": [{
+					"inputType": "text",
+					"internalName": "appservicename",
+					"label": "App Service Name",
+					"value": "",
+					"placeholder": "App Service Name",
+					"attrHelpText": "Enter the service name of the app."
+				},
+				{
+					"inputType": "text",
+					"internalName": "appserviceurl",
+					"label": "App Service URL",
+					"value": "",
+					"placeholder": "App Service URL",
+					"attrHelpText": "Enter the url of the app."
+				}
+			]
+		},
+		{
+			"title": "Data Factory Details",
+			"helpText": "Add details regarding Data Factory.",
+			"sectionAttributes": [{
+					"inputType": "text",
+					"internalName": "datafactoryname",
+					"label": "Data Factory Name",
+					"value": "",
+					"placeholder": "Data Factory Name",
+					"attrHelpText": "Enter Data Factory Name."
+				},
+				{
+					"inputType": "select",
+					"internalName": "datafactorylocation",
+					"options": ["East-US", "West-US", "Central-US"],
+					"label": "Data Factory Location",
+					"value": "Central-US",
+					"placeholder": "Data Factory Location",
+					"attrHelpText": "Select the Data Factory Location."
+				},
+				{
+					"inputType": "select",
+					"internalName": "datafactorysources",
+					"options": ["BQ", "Oracle", "SAP", "SalesForce", "Blob"],
+					"label": "Data Factory Sources",
+					"value": "BQ",
+					"placeholder": "Data Factory Sources",
+					"attrHelpText": "Select the Data Factory Sources."
+				}
+			],
+			"subsections": {
+				"parentName": "datafactorysources",
+				"sections": {
+					"BQ": {
+						"title": "BQ Details",
+						"helpText": "Add details regarding BQ.",
+						"subsectionAttributes": [{
+								"inputType": "text",
+								"internalName": "bqproject",
+								"label": "BQ Project",
+								"value": "",
+								"placeholder": "BQ Name",
+								"attrHelpText": "Enter BQ name."
+							},
+							{
+								"inputType": "text",
+								"internalName": "bqclientid",
+								"label": "BQ Client ID",
+								"value": "",
+								"placeholder": "BQ Client ID",
+								"attrHelpText": "Enter the BQ Client ID."
+							},
+							{
+								"inputType": "text",
+								"internalName": "bqclientsecret",
+								"label": "BQ Client Secret",
+								"value": "",
+								"placeholder": "BQ Client Secret",
+								"attrHelpText": "Enter the BQ Client Secret."
+							},
+							{
+								"inputType": "text",
+								"internalName": "bqtoken",
+								"label": "BQ Token",
+								"value": "",
+								"placeholder": "BQ Token",
+								"attrHelpText": "Enter the BQ Token."
+							},
+							{
+								"inputType": "text",
+								"internalName": "bqtableschema",
+								"label": "BQ Table Schema",
+								"value": "",
+								"placeholder": "BQ Table Schema",
+								"attrHelpText": "Enter the BQ Table Schema."
+							},
+							{
+								"inputType": "text",
+								"internalName": "bqtables",
+								"label": "BQ Tables",
+								"value": "",
+								"placeholder": "BQ Tables",
+								"attrHelpText": "Enter the BQ Tables."
+							}
+						]
+					},
+					"SAP": {
+						"title": "SAP Details",
+						"helpText": "Add details regarding BQ.",
+						"subsectionAttributes": [{
+								"inputType": "text",
+								"internalName": "SAPServerName",
+								"label": "SAP Server Name",
+								"value": "",
+								"placeholder": "SAP Server Name",
+								"attrHelpText": "Enter SAP Server Name."
+							},
+							{
+								"inputType": "text",
+								"internalName": "SAPUsername",
+								"label": "SAP Username",
+								"value": "",
+								"placeholder": "SAP Username",
+								"attrHelpText": "Enter the SAP Username."
+							},
+							{
+								"inputType": "password",
+								"internalName": "SAPPassword",
+								"label": "SAP Password",
+								"value": "",
+								"placeholder": "SAP Password",
+								"attrHelpText": "Enter the SAP Password."
+							},
+							{
+								"inputType": "text",
+								"internalName": "SAPSchema",
+								"label": "SAP Schema",
+								"value": "",
+								"placeholder": "SAP Schema",
+								"attrHelpText": "Enter the SAP Schema."
+							},
+							{
+								"inputType": "text",
+								"internalName": "SAPTables",
+								"label": "SAP Tables",
+								"value": "",
+								"placeholder": "SAP Tables",
+								"attrHelpText": "Enter the SAP Tables."
+							}
+						]
+					},
+					"Oracle": {
+						"title": "Oracle Details",
+						"helpText": "Add details regarding Oracle.",
+						"subsectionAttributes": [{
+								"inputType": "text",
+								"internalName": "OracleServerName",
+								"label": "Oracle Server Name",
+								"value": "",
+								"placeholder": "Oracle Server Name",
+								"attrHelpText": "Enter the Oracle Server Name."
+							},
+							{
+								"inputType": "text",
+								"internalName": "OraclePort",
+								"label": "Oracle Port",
+								"value": "",
+								"placeholder": "Oracle Port",
+								"attrHelpText": "Enter the Oracle Port."
+							},
+							{
+								"inputType": "text",
+								"internalName": "OracleSID",
+								"label": "Oracle SID",
+								"value": "",
+								"placeholder": "Oracle SID",
+								"attrHelpText": "Enter the Oracle SID."
+							},
+							{
+								"inputType": "text",
+								"internalName": "OracleUser",
+								"label": "Oracle User",
+								"value": "",
+								"placeholder": "Oracle User",
+								"attrHelpText": "Enter the Oracle User."
+							},
+							{
+								"inputType": "password",
+								"internalName": "OraclePassword",
+								"label": "Oracle Password",
+								"value": "",
+								"placeholder": "Oracle Password",
+								"attrHelpText": "Enter the Oracle Password."
+							},
+
+							{
+								"inputType": "text",
+								"internalName": "OracleSchema",
+								"label": "Oracle Schema",
+								"value": "",
+								"placeholder": "Oracle Schema",
+								"attrHelpText": "Enter the Oracle Schema."
+							},
+							{
+								"inputType": "text",
+								"internalName": "OracleTables",
+								"label": "Oracle Tables",
+								"value": "",
+								"placeholder": "Oracle Tables",
+								"attrHelpText": "Enter the Oracle Tables."
+							}
+						]
+					},
+					"SalesForce": {
+						"title": "SalesForce Details",
+						"helpText": "Add details regarding SalesForce.",
+						"subsectionAttributes": [{
+								"inputType": "text",
+								"internalName": "SalesForceUsername",
+								"label": "SalesForce Username",
+								"value": "",
+								"placeholder": "SalesForce Username",
+								"attrHelpText": "Enter the SalesForce Username."
+							},
+							{
+								"inputType": "password",
+								"internalName": "SalesForcePassword",
+								"label": "SalesForce Password",
+								"value": "",
+								"placeholder": "SalesForce Password",
+								"attrHelpText": "Enter the SalesForce Password."
+							},
+							{
+								"inputType": "text",
+								"internalName": "SalesForceToken",
+								"label": "SalesForce Token",
+								"value": "",
+								"placeholder": "SalesForce Token",
+								"attrHelpText": "Enter the SalesForce Token."
+							},
+							{
+								"inputType": "text",
+								"internalName": "SalesForceSchema",
+								"label": "SalesForce Schema",
+								"value": "",
+								"placeholder": "SalesForce Schema",
+								"attrHelpText": "Enter the SalesForce Schema."
+							},
+							{
+								"inputType": "text",
+								"internalName": "SalesForceTables",
+								"label": "SalesForce Tables",
+								"value": "",
+								"placeholder": "SalesForce tables",
+								"attrHelpText": "Enter the SalesForce Tables."
+							}
+						]
+					},
+					"Blob": {
+						"title": "Blob Details",
+						"helpText": "Add details regarding Blob.",
+						"subsectionAttributes": [{
+							"inputType": "text",
+							"internalName": "BlobTableName",
+							"label": "Blob Table",
+							"value": "",
+							"placeholder": "Blob Table",
+							"attrHelpText": "Enter the Blob Table."
+						}]
+					}
+
+				}
+			}
+		},
+		{
+			"title": "Storage Account Details",
+			"helpText": "Add details regarding Storage Account.",
+			"sectionAttributes": [{
+					"inputType": "text",
+					"internalName": "storageaccountname",
+					"label": "Storage Account Name",
+					"value": "",
+					"placeholder": "Data Factory Name",
+					"attrHelpText": "Enter Data Factory Name."
+				},
+				{
+					"inputType": "text",
+					"internalName": "accesskey",
+					"label": "Access Key",
+					"value": "",
+					"placeholder": "Access Key",
+					"attrHelpText": "Enter the Access Key."
+				},
+				{
+					"inputType": "text",
+					"internalName": "storageconnstring",
+					"label": "Storage Account Connection String",
+					"value": "",
+					"placeholder": "Connection String",
+					"attrHelpText": "Enter the Storage Account Connection String."
+				}
+			]
+		}
+	]
+}
