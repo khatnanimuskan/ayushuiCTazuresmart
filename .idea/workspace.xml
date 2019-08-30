@@ -2,11 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c37152-1ca1-418d-a08a-a7e2e965f21c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AzureSite/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/AzureSite/parameters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AzureSite/sections.json" beforeDir="false" afterPath="$PROJECT_DIR$/AzureSite/sections.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AzureSite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AzureSite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupplyChain/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupplyChain/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AzureSite/sections_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AzureSite/sections_old.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/css/toolkit-light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/fonts/toolkit-entypo.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/fonts/toolkit-entypo.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/images/Celebal-tech-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/images/Celeballogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/js/fontawesome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/js/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/js/vue.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/json/format.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/assets/json/sections.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/static/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/SupplyChain/static/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SupplyChain/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SupplyChain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupplyChain/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SupplyChain/views_old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/css/toolkit-light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/fonts/toolkit-entypo.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/fonts/toolkit-entypo.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/images/Celebal-tech-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/images/Celeballogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/js/fontawesome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/js/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/js/vue.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/json/format.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/assets/json/sections.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supplychain/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upload_files/ADFParameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/upload_files/ADFParameters.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload_files/KeyVaultParameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/upload_files/KeyVaultParameters.json" afterDir="false" />
     </list>
@@ -19,10 +53,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AzureSite/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SupplyChain/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="282" column="50" selection-start-line="282" selection-start-column="50" selection-end-line="282" selection-end-column="50" />
+            <state relative-caret-position="-2794">
+              <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -31,64 +74,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload_files/ADFParameters.json">
+        <entry file="file://$PROJECT_DIR$/SupplyChain/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="80" lean-forward="true" selection-end-column="1008" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload_files/KeyVaultParameters.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="117" selection-start-column="117" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/supplychain/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/supplychain/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="39" column="202" lean-forward="true" selection-start-line="39" selection-start-column="202" selection-end-line="39" selection-end-column="202" />
+            <state relative-caret-position="1430">
+              <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#nav#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#9034#9041#1#HTML" expanded="true" />
+                <element signature="e#9142#9149#1#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SupplyChain/deployer_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AzureSite/sections.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="507" column="50" selection-start-line="507" selection-start-column="50" selection-end-line="507" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -97,10 +92,46 @@
         <entry file="file://$PROJECT_DIR$/SupplyChain/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SupplyChain/static/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SupplyChain/static/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SupplyChain/static/assets/js/fontawesome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AzureSite/sections.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="361" column="55" selection-start-line="361" selection-start-column="37" selection-end-line="361" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -125,25 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>open</find>
-      <find>datafactoryname</find>
-      <find>&quot;DataFactoryName&quot;</find>
-      <find>DataBricksToken</find>
-      <find>DataBricksScope</find>
-      <find>DataBricks</find>
-      <find>powerbi</find>
-      <find>AppServiceName</find>
-      <find>AzureFunctionURL</find>
-      <find>ResourceGroupName</find>
-      <find>ResourceGrou</find>
-      <find>deployment</find>
-      <find>deploy</find>
-      <find>StorageConnectionString</find>
-      <find>select</find>
-      <find>datafactorysour</find>
-      <find>datafactoryso</find>
-      <find>datafactory</find>
-      <find>datafactorys</find>
       <find>logo</find>
       <find>cen</find>
       <find>centra</find>
@@ -153,8 +165,27 @@
       <find>clie</find>
       <find>sqlda</find>
       <find>res</find>
-      <find>clients</find>
+      <find>print</find>
       <find>keyva</find>
+      <find>baseurl</find>
+      <find>urls</find>
+      <find>base</find>
+      <find>storage_ve</find>
+      <find>account</find>
+      <find>get</find>
+      <find>config</find>
+      <find>clients</find>
+      <find>StorageAccountName</find>
+      <find>help</find>
+      <find>storageaccountname</find>
+      <find>storagea</find>
+      <find>storageaccount</find>
+      <find>supplychain</find>
+      <find>forma</find>
+      <find>index.html</find>
+      <find>storage</find>
+      <find>reason</find>
+      <find>storageacc</find>
     </findStrings>
     <replaceStrings>
       <replace>sectionAttributes</replace>
@@ -174,13 +205,18 @@
         <option value="$PROJECT_DIR$/SupplyChain/tests.py" />
         <option value="$PROJECT_DIR$/SupplyChain/deployer_file.py" />
         <option value="$PROJECT_DIR$/templates/config.js" />
-        <option value="$PROJECT_DIR$/templates/supplychain/config.js" />
         <option value="$PROJECT_DIR$/SupplyChain/urls.py" />
-        <option value="$PROJECT_DIR$/AzureSite/settings.py" />
         <option value="$PROJECT_DIR$/AzureSite/parameters.json" />
-        <option value="$PROJECT_DIR$/SupplyChain/views.py" />
         <option value="$PROJECT_DIR$/AzureSite/sections.json" />
+        <option value="$PROJECT_DIR$/templates/supplychain/config.js" />
+        <option value="$PROJECT_DIR$/templates/supplychain/assets/json/format.json" />
+        <option value="$PROJECT_DIR$/templates/supplychain/assets/js/main.js" />
         <option value="$PROJECT_DIR$/templates/supplychain/index.html" />
+        <option value="$PROJECT_DIR$/SupplyChain/views.py" />
+        <option value="$PROJECT_DIR$/AzureSite/settings.py" />
+        <option value="$PROJECT_DIR$/SupplyChain/static/config.js" />
+        <option value="$PROJECT_DIR$/SupplyChain/static/index.html" />
+        <option value="$PROJECT_DIR$/SupplyChain/static/assets/js/main.js" />
       </list>
     </option>
   </component>
@@ -221,12 +257,17 @@
             <path>
               <item name="AzureSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="AzureSite" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="SupplyChain" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AzureSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="AzureSite" type="462c0819:PsiDirectoryNode" />
-              <item name="upload_files" type="462c0819:PsiDirectoryNode" />
+              <item name="SupplyChain" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -373,17 +414,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100913000" />
+    <option name="totallyTimeSpent" value="111147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20308311" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.02010724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.042432815" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.427157" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.20509194" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -392,7 +433,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75067025" visible="true" weight="0.34653464" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75067025" visible="true" weight="0.5785007" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.43422914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -402,7 +443,7 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20308311" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20509383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -415,7 +456,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75067025" visible="true" weight="0.042432815" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75067025" visible="true" weight="0.22489391" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.43422914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -444,16 +485,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AzureSite/KeyVaultParameters.csv" />
-    <entry file="file://$PROJECT_DIR$/AzureSite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/format.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -490,30 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AzureSite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SupplyChain/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/supplychain/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload_files/KeyVaultParameters.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -531,23 +538,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SupplyChain/static/config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload_files/ADFParameters.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="80" lean-forward="true" selection-end-column="1008" />
+          <caret column="80" selection-end-column="541" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SupplyChain/views.py">
+    <entry file="file://$PROJECT_DIR$/AzureSite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="282" column="50" selection-start-line="282" selection-start-column="50" selection-end-line="282" selection-end-column="50" />
+        <state relative-caret-position="87">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#633#665#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/static/assets/js/fontawesome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -558,23 +579,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/supplychain/assets/json/format.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="160" column="52" lean-forward="true" selection-start-line="160" selection-start-column="52" selection-end-line="160" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AzureSite/sections.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="507" column="50" selection-start-line="507" selection-start-column="50" selection-end-line="507" selection-end-column="50" />
+        <state relative-caret-position="108">
+          <caret line="361" column="55" selection-start-line="361" selection-start-column="37" selection-end-line="361" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/supplychain/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="39" column="202" lean-forward="true" selection-start-line="39" selection-start-column="202" selection-end-line="39" selection-end-column="202" />
+        <state relative-caret-position="150">
+          <caret line="91" column="92" selection-start-line="91" selection-start-column="78" selection-end-line="91" selection-end-column="92" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#nav#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#9034#9041#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/supplychain/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="114" column="31" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/supplychain/config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AzureSite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#nav#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9142#9149#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/static/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2794">
+          <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/static/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="31" />
         </state>
       </provider>
     </entry>

@@ -113,7 +113,7 @@ var app = new Vue({
     validateSubsection(fieldName, value) {
 			var self = this
 			self.storageaccountnameerror = false
-      if (fieldName === 'storageaccountname' && value.length > 0) {
+      if (fieldName === 'StorageAccountName' && value.length > 0) {
 				// console.log('blur evt fired')
         var oReq = new XMLHttpRequest()
         oReq.onload = function() {

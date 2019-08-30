@@ -66,7 +66,6 @@ def azure_account(data):
             tenant=tenant
         )
 
-        print(storage_account_name, "storage_account_name.....")
         resource_client = ResourceManagementClient(credentials, subscription_id)
         storage_client = StorageManagementClient(credentials, subscription_id)
     except Exception as e:
@@ -81,10 +80,8 @@ class azure_functions(APIView):
     def post(self, request):
         try:
             resource_client, storage_client, storage_account_name = azure_account(request.data)
-            print("storage_account_name: ", storage_account_name)
             availability = storage_client.storage_accounts.check_name_availability(storage_account_name)
             reason = availability.reason
-            print("reason:", reason)
             if reason is not None and reason == "AlreadyExists":
                 return JsonResponse({"status": "success"})
             else:
@@ -104,9 +101,9 @@ def index(request):
     try:
         data = read_mapping()
     except Exception as e:
-        return render(request, 'supplychain/index.html', context={'message': 'Failed'})
+        return render(request, 'index.html', context={'message': 'Failed'})
     # return JsonResponse({'message': 'Successful', 'formConfig': data})
-    return render(request, 'supplychain/index.html', context={'message': 'Successful'})
+    return render(request, 'index.html', context={'message': 'Successful'})
 
 class SupplyChain(APIView):
 
@@ -209,14 +206,12 @@ class SupplyChain(APIView):
 
         # Get all required parameters from submitted data for Azure Deployment
         try:
-            print('--------', vault_dict)
             connectionstring = vault_dict['parameters']['StorageConnectionString']['value']
             account_name = vault_dict['parameters']['StorageAccountName']['value']
             access_key = vault_dict['parameters']['StorageAccessKey']['value']
 
             for key in range(len(section_data)):
                 try:
-                    # print(section_data[i]['title'])
                     if section_data[key]['title']=='Subscription Details':
                         subscription_id = section_data[key]['sectionAttributes'][0]['value']
                         tenant = section_data[key]['sectionAttributes'][1]['value']
@@ -243,7 +238,6 @@ class SupplyChain(APIView):
                 json.dump(vault_dict, kv)
 
             print("adf and kv files created")
-            print('account nameacs ', storage_account_name, access_key)
             # resource_client, storage_client = azure_account(request.data)
             # Create a storage blob container to store the files
             # Create the BlockBlockService that is used to call the Blob service for the storage account.
