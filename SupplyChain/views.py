@@ -9,6 +9,7 @@ import json
 import random
 import string
 import glob
+from django.views.generic import TemplateView
 from azure.storage.blob import BlockBlobService
 from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource import ResourceManagementClient
@@ -92,18 +93,19 @@ class azure_functions(APIView):
             return JsonResponse({'status': 'failed'})
 
 
-def index(request):
-    """
 
-    :param request: request data
-    :return: JsonResponse containing form sections detail
-    """
-    try:
-        data = read_mapping()
-    except Exception as e:
-        return render(request, 'index.html', context={'message': 'Failed'})
-    # return JsonResponse({'message': 'Successful', 'formConfig': data})
-    return render(request, 'index.html', context={'message': 'Successful'})
+class index(TemplateView):
+    template_name = "index.html"
+
+
+    def get(self, request):
+        try:
+            form_data = read_mapping()
+        except Exception as e:
+            return render(request, self.template_name, context={'message': 'failed'})
+        # return JsonResponse({'message': 'Successful'})
+        return render(request, self.template_name, context={'message': 'Successful'})
+
 
 class SupplyChain(APIView):
 
@@ -192,10 +194,10 @@ class SupplyChain(APIView):
                         "table_name": tables[i]})
             else:
                 # when Blob Option is choosen
-                adf_dict['parameters']["BlobTables"] = {"value": []}
+                adf_dict['parameters']["BlobTable"] = {"value": []}
                 tables = section_data[3]['subsections']['sections'][selected_value]['subsectionAttributes'][0]['value'].split(',')
                 for table in range(len(tables)):
-                    adf_dict['parameters']["BlobTables"]['value'].append({'table_name': tables[table]})
+                    adf_dict['parameters']["BlobTable"]['value'].append({'table_name': tables[table]})
 
         except KeyError as e:
             print("Keyerror Exception in creating table data: ", e)
@@ -284,7 +286,7 @@ class SupplyChain(APIView):
                 print("Exception in deploy the data factory: ", e)
             # Remove conatiner from storage account after deployment
             try:
-                time.sleep(720)
+                time.sleep(5)
                 delete_container = blob_client.delete_container(container_name)
                 print("delete container: ", delete_container)
             except Exception as e:

@@ -67,9 +67,7 @@
 				{
 					"inputType": "select",
 					"internalName": "ResourceGroupLocation",
-					"options": ["Australia East", "Brazil South", "Canada Central", "Central India", "Central US",
-        						"East US", "East US 2", "France Central", "Japan East", "North Europe", "South Central US", "Southeast Asia", "UK South",
-        						"West Central US", "West Europe", "West US", "West US 2"],
+					"options": ["East US", "West US", "Central US"],
 					"label": "Resource Group Location",
 					"value": "East US",
 					"placeholder": "Resource Group Location",
@@ -112,7 +110,9 @@
 				{
 					"inputType": "select",
 					"internalName": "DataFactoryLocation",
-					"options": ["East US", "West US", "Central US"],
+					"options":["Australia East", "Brazil South", "Canada Central", "Central India", "Central US",
+        						"East US", "East US 2", "France Central", "Japan East", "North Europe", "South Central US", "Southeast Asia", "UK South",
+        						"West Central US", "West Europe", "West US", "West US 2"],
 					"label": "Data Factory Location",
 					"value": "Central US",
 					"placeholder": "Data Factory Location",
@@ -189,7 +189,7 @@
 						"helpText": "Add details regarding BQ.",
 						"subsectionAttributes": [{
 								"inputType": "text",
-								"internalName": "SAPServerName",
+								"internalName": "SAPServer",
 								"label": "SAP Server Name",
 								"value": "",
 								"placeholder": "SAP Server Name",
@@ -343,7 +343,7 @@
                     "helpText": "Add details regarding Blob.",
                     "subsectionAttributes": [{
 								"inputType": "text",
-								"internalName": "BlobTableName",
+								"internalName": "BlobTable",
 								"label": "Blob Table",
 								"value": "",
 								"placeholder": "Blob Table",
