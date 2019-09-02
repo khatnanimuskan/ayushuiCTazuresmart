@@ -1,4 +1,11 @@
+
+
 document.addEventListener('DOMContentLoaded', _ => {
+    $.get("https://newcelebal.azurewebsites.net/.auth/me", function(data) {
+    console.log(data);
+    document.getElementById("").innerHTML = data[0].user_claims[11].val;
+    console.log(document.getElementById("").innerHTML = data[0].user_claims[11].val);
+  })
   document.getElementById('form-div').style.visibility = 'visible'
   $('[data-toggle="tooltip"]').tooltip()
 })
@@ -52,7 +59,7 @@ var app = new Vue({
       var oReq = new XMLHttpRequest()
       oReq.onload = reqListener
       oReq.onerror = reqError
-      oReq.open('get', urls.baseurl + '/get_data', true)
+      oReq.open('get', '/get_data', true)
       oReq.send()
     },
 
@@ -83,7 +90,7 @@ var app = new Vue({
       var oReq = new XMLHttpRequest()
       oReq.onload = reqListener
       oReq.onerror = reqError
-      oReq.open('post', urls.baseurl + '/get_data', true)
+      oReq.open('post','/get_data', true)
       oReq.setRequestHeader('Content-Type', 'application/json')
       oReq.send(JSON.stringify(this.userInput))
     },
@@ -105,7 +112,7 @@ var app = new Vue({
       oReq.onerror = function(err) {
         console.log('Fetch Error :-S', err)
       }
-      oReq.open('get', urls.baseurl + '/uniqueid', true)
+      oReq.open('get',  '/uniqueid', true)
       oReq.setRequestHeader('Content-Type', 'application/json')
       oReq.send()
     },
@@ -128,8 +135,7 @@ var app = new Vue({
 					self.storageaccountnameerror = false
         }
         oReq.open(
-          'post',
-          urls.baseurl + '/storage_verify',
+          'post', '/storage_verify',
           true
         )
         oReq.setRequestHeader('Content-Type', 'application/json')

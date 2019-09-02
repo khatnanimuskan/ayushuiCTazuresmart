@@ -57,6 +57,7 @@ def azure_account(data):
                     tenant = sections_data[section]['sectionAttributes'][1]['value']
                     client_id = sections_data[section]['sectionAttributes'][2]['value']
                     secret = sections_data[section]['sectionAttributes'][3]['value']
+                    resource_group = sections_data[section]['sectionAttributes'][4]['value']
                 elif sections_data[section]['title'] =='Storage Account Details':
                     storage_account_name = sections_data[section]['sectionAttributes'][0]['value']
             except Exception as e:
@@ -69,9 +70,10 @@ def azure_account(data):
 
         resource_client = ResourceManagementClient(credentials, subscription_id)
         storage_client = StorageManagementClient(credentials, subscription_id)
+
     except Exception as e:
         print('error in azure_account function:', e)
-    return resource_client, storage_client, storage_account_name
+    return resource_client, storage_client, storage_account_name, resource_group
 
 
 class azure_functions(APIView):
@@ -80,14 +82,22 @@ class azure_functions(APIView):
 
     def post(self, request):
         try:
-            resource_client, storage_client, storage_account_name = azure_account(request.data)
-            availability = storage_client.storage_accounts.check_name_availability(storage_account_name)
-            reason = availability.reason
-            if reason is not None and reason == "AlreadyExists":
-                return JsonResponse({"status": "success"})
+            resource_client, storage_client, storage_account_name, resource_group = azure_account(request.data)
+            # Checking availability for storage account name
+            if storage_account_name != '':
+                availability = storage_client.storage_accounts.check_name_availability(storage_account_name)
+                reason = availability.reason
+                if reason is not None and reason == "AlreadyExists":
+                    return JsonResponse({"status": "success", "message": ""})
+                else:
+                    return JsonResponse({"status": "failed", "message": "Storage Account doesn't exist"})
+            # Checking availability for resource group
             else:
-                return JsonResponse({"status": "failed"})
-
+                resource_availability = resource_client.resource_groups.check_existence(resource_group)
+                if resource_availability:
+                    return JsonResponse({"status": "success", "message": ""})
+                else:
+                    return JsonResponse({"status": "failed", "message": "Resource Group Doesn't exist"})
         except Exception as e:
             print('In azure_function exception', e)
             return JsonResponse({'status': 'failed'})
