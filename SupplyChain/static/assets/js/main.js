@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', _ => {
     $.get("/.auth/me", function(data) {
     console.log(data);
-    document.getElementById("CustomerName").innerHTML = data[0].user_claims[11].val;
+    document.getElementById("username").innerHTML = data[0].user_claims[11].val;
   })
   document.getElementById('form-div').style.visibility = 'visible'
   $('[data-toggle="tooltip"]').tooltip()

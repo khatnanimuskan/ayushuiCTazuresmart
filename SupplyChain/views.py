@@ -15,6 +15,7 @@ from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.storage import StorageManagementClient
 from azure.mgmt.storage.models import StorageAccountCreateParameters
+from .databricks_linux import databricks
 
 # read Data for form config File
 def read_mapping():
@@ -296,7 +297,15 @@ class SupplyChain(APIView):
                 print("Exception in deploy the data factory: ", e)
             # Remove conatiner from storage account after deployment
             try:
-                time.sleep(5)
+                try:
+                    databricksToken = vault_dict['parameters']['DataBricksToken']
+                    databricksScope = vault_dict['parameters']['DataBricksScope']
+                    databricksURL = vault_dict['parameters']['DataBricksWorkspaceURL']
+                    databricks.main(databricksURL, databricksToken, databricksScope)
+                except Exception as e:
+                    print('exception in databricks function')
+
+                time.sleep(720)
                 delete_container = blob_client.delete_container(container_name)
                 print("delete container: ", delete_container)
             except Exception as e:
