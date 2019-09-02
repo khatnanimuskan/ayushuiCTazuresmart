@@ -134,7 +134,33 @@ var app = new Vue({
 					self.storageaccountnameerror = false
         }
         oReq.open(
-          'post', '/storage_verify',
+          'post',
+            'post', '/storage_verify',
+          true
+        )
+        oReq.setRequestHeader('Content-Type', 'application/json')
+        oReq.send(JSON.stringify(this.userInput))
+			} else if (fieldName === 'ResourceGroupName' && value.length > 0) {
+				console.log('blur evt fired')
+        var oReq = new XMLHttpRequest()
+        oReq.onload = function() {
+					let resp = JSON.parse(this.responseText)
+					console.log(resp)
+					if (resp.status === 'failed') {
+						console.log('aaya')
+						self.resourcegrouperror = true
+						self.resourcegrouperrormsg = resp.message
+					}
+					else if (resp.status === 'success') self.resourcegrouperror = false
+					else self.resourcegrouperror = false
+        }
+        oReq.onerror = function(err) {
+					console.log('Fetch Error :-S', err)
+					self.storageaccountnameerror = false
+        }
+        oReq.open(
+          'post',
+           '/storage_verify',
           true
         )
         oReq.setRequestHeader('Content-Type', 'application/json')
