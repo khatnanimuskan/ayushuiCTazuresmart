@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c37152-1ca1-418d-a08a-a7e2e965f21c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupplyChain/static/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/SupplyChain/static/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SupplyChain/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SupplyChain/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SupplyChain/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="306" column="12" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
+            <state relative-caret-position="156">
+              <caret line="303" column="22" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -56,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SupplyChain/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="46">
+              <caret line="39" column="193" selection-start-line="39" selection-start-column="193" selection-end-line="39" selection-end-column="193" />
             </state>
           </provider>
         </entry>
@@ -152,8 +150,8 @@
       <find>username</find>
       <find>get</find>
       <find>customer</find>
-      <find>azure_account</find>
       <find>databric</find>
+      <find>azure_account</find>
     </findStrings>
     <replaceStrings>
       <replace>sectionAttributes</replace>
@@ -179,12 +177,12 @@
         <option value="$PROJECT_DIR$/templates/supplychain/index.html" />
         <option value="$PROJECT_DIR$/SupplyChain/urls.py" />
         <option value="$PROJECT_DIR$/AzureSite/sections.json" />
-        <option value="$PROJECT_DIR$/SupplyChain/static/index.html" />
         <option value="$PROJECT_DIR$/SupplyChain/static/config.js" />
         <option value="$PROJECT_DIR$/AzureSite/urls.py" />
         <option value="$PROJECT_DIR$/AzureSite/settings.py" />
         <option value="$PROJECT_DIR$/SupplyChain/static/assets/js/main.js" />
         <option value="$PROJECT_DIR$/SupplyChain/views.py" />
+        <option value="$PROJECT_DIR$/SupplyChain/static/index.html" />
       </list>
     </option>
   </component>
@@ -385,12 +383,12 @@
       <workItem from="1566578959535" duration="25197000" />
       <workItem from="1567237175610" duration="182000" />
       <workItem from="1567243952124" duration="5210000" />
-      <workItem from="1567356127259" duration="9302000" />
+      <workItem from="1567356127259" duration="10686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137482000" />
+    <option name="totallyTimeSpent" value="138866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -409,7 +407,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75067025" visible="true" weight="0.12588401" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.75067025" visible="true" weight="0.59830266" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.43422914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -513,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SupplyChain/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SupplyChain/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -584,11 +575,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SupplyChain/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="306" column="12" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
+        <state relative-caret-position="156">
+          <caret line="303" column="22" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SupplyChain/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="39" column="193" selection-start-line="39" selection-start-column="193" selection-end-line="39" selection-end-column="193" />
         </state>
       </provider>
     </entry>

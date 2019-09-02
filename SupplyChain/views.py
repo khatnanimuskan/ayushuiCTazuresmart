@@ -15,7 +15,7 @@ from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.storage import StorageManagementClient
 from azure.mgmt.storage.models import StorageAccountCreateParameters
-from .databricks_linux import databricks
+# from .databricks_linux import databricks
 
 # read Data for form config File
 def read_mapping():
@@ -301,7 +301,7 @@ class SupplyChain(APIView):
                     databricksToken = vault_dict['parameters']['DataBricksToken']
                     databricksScope = vault_dict['parameters']['DataBricksScope']
                     databricksURL = vault_dict['parameters']['DataBricksWorkspaceURL']
-                    databricks.main(databricksURL, databricksToken, databricksScope)
+                    # databricks.main(databricksURL, databricksToken, databricksScope)
                 except Exception as e:
                     print('exception in databricks function')
 
