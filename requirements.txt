@@ -45,7 +45,7 @@ decorator==4.3.0
 defusedxml==0.6.0
 dict2xml==1.5
 dicttoxml==1.7.4
-Django==2.0.7
+Django==2.2.24
 django-cors-headers==2.4.0
 django-extensions==2.1.9
 django-pyodbc-azure==2.0.6.1
