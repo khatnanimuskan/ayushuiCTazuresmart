@@ -121,7 +121,7 @@ pyrsistent==0.15.1
 python-dateutil==2.7.3
 python-magic==0.4.15
 pytz==2018.5
-pywin32==224
+pywin32==301
 pywin32-ctypes==0.2.0
 pywinpty==0.5.5
 pyxlsb==1.0.3
