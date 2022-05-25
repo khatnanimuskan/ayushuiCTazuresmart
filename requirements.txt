@@ -115,7 +115,7 @@ py4j==0.10.7
 pycparser==2.18
 pycryptodome==3.6.4
 Pygments==2.3.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 PyMySQL==0.9.3
 pyrsistent==0.15.1
 python-dateutil==2.7.3
