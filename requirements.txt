@@ -98,7 +98,7 @@ nbconvert==5.5.0
 nbformat==4.4.0
 notebook==5.7.8
 ntlm-auth==1.4.0
-numpy==1.14.5
+numpy==1.22.0
 O365==2.0.1
 oauthlib==3.1.0
 pandas==0.24.2
